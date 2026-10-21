@@ -1,0 +1,58 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Fixed Frame: odom
+    Background Color: 48; 48; 48
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Reference Frame: odom
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+    - Class: rviz_default_plugins/Path
+      Name: Reference
+      Enabled: true
+      Color: 200; 200; 200
+      Topic:
+        Value: /mpc/reference
+        Durability Policy: Transient Local
+    - Class: rviz_default_plugins/Path
+      Name: Predicted
+      Enabled: true
+      Color: 255; 85; 0
+      Line Style: Billboards
+      Line Width: 0.04
+      Topic:
+        Value: /mpc/predicted
+    - Class: rviz_default_plugins/Odometry
+      Name: Odometry
+      Enabled: true
+      Keep: 1
+      Shape:
+        Value: Axes
+        Axes Length: 0.25
+        Axes Radius: 0.03
+      Topic:
+        Value: /odom
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Scale: 110
+      X: 0.6
+      Y: 0.7
+Window Geometry:
+  Displays:
+    collapsed: true
+  Width: 1280
+  Height: 720
+  X: 0
+  Y: 0
